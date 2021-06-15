@@ -1,0 +1,4 @@
+.envrc.secret
+.direnv
+__pycache__
+out

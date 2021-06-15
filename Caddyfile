@@ -1,0 +1,8 @@
+:80 {
+    route /out/* {
+        uri strip_prefix /out
+        root * /app/out
+        file_server
+    }
+    reverse_proxy localhost:3000
+}

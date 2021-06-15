@@ -1,0 +1,16 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+
+This file is friends/templates/index.html. {% if friend_list %} My friends
+<ul>
+  {% for friend in friend_list %}
+  <li>{{ friend.first_name }}: {{ friend.email }}</li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>
+  No friends here! Create a superuser using the IDE Shell (./manage.py
+  createsuperuser) and add friends in the <a href="/admin">Django Admin</a>
+</p>
+{% endif %}
