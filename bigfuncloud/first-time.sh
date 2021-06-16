@@ -7,10 +7,10 @@ eval "$(direnv export bash)"
 
 pip3 install -r ./requirements.txt
 
-django-admin startproject @BFC_PYTHON_IDENTIFIER@ .
+django-admin startproject main .
 django-admin startapp friends
 
-mv ./overlay/project/* ./@BFC_PYTHON_IDENTIFIER@
+mv ./overlay/main/* ./main
 mv ./overlay/friends/* ./friends
 rm -rf ./overlay
 
